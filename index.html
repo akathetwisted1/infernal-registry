@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Infernal Registry — Igor & Fede</title>
 
   <style>
@@ -27,7 +28,12 @@
       margin: 0;
       min-height: 100vh;
       background:
-        radial-gradient(circle at top, #27172e 0%, #120d16 43%, #070608 100%);
+        radial-gradient(
+          circle at top,
+          #27172e 0%,
+          #120d16 43%,
+          #070608 100%
+        );
       color: var(--ink);
       font-family: Georgia, "Times New Roman", serif;
       display: flex;
@@ -52,47 +58,68 @@
     .card {
       position: relative;
       overflow: hidden;
+
       background:
-        radial-gradient(circle at 50% 18%, rgba(147, 88, 166, 0.08), transparent 28%),
-        linear-gradient(rgba(255,255,255,0.015), rgba(255,255,255,0.008)),
+        radial-gradient(
+          circle at 50% 18%,
+          rgba(147, 88, 166, 0.08),
+          transparent 28%
+        ),
+        linear-gradient(
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.008)
+        ),
         var(--panel);
+
       border: 1px solid var(--line);
+
       box-shadow:
         0 0 0 3px #0a080c,
         0 0 0 4px #3d2d47,
         0 20px 55px rgba(0,0,0,0.55);
+
       padding: 28px 20px;
     }
+
+    /* Faint ritual geometry behind the header */
 
     .card::before {
       content: "";
       position: absolute;
       inset: 125px 55px auto 55px;
       height: 340px;
+
       background:
-        radial-gradient(circle, transparent 38%, rgba(0,0,0,0) 39%),
+        radial-gradient(
+          circle,
+          transparent 38%,
+          rgba(0,0,0,0) 39%
+        ),
         conic-gradient(
           from 0deg,
           transparent 0deg 18deg,
-          rgba(174, 112, 194, 0.09) 18deg 21deg,
+          rgba(174,112,194,0.09) 18deg 21deg,
           transparent 21deg 72deg,
-          rgba(174, 112, 194, 0.09) 72deg 75deg,
+          rgba(174,112,194,0.09) 72deg 75deg,
           transparent 75deg 126deg,
-          rgba(174, 112, 194, 0.09) 126deg 129deg,
+          rgba(174,112,194,0.09) 126deg 129deg,
           transparent 129deg 180deg,
-          rgba(174, 112, 194, 0.09) 180deg 183deg,
+          rgba(174,112,194,0.09) 180deg 183deg,
           transparent 183deg 234deg,
-          rgba(174, 112, 194, 0.09) 234deg 237deg,
+          rgba(174,112,194,0.09) 234deg 237deg,
           transparent 237deg 288deg,
-          rgba(174, 112, 194, 0.09) 288deg 291deg,
+          rgba(174,112,194,0.09) 288deg 291deg,
           transparent 291deg 342deg,
-          rgba(174, 112, 194, 0.09) 342deg 345deg,
+          rgba(174,112,194,0.09) 342deg 345deg,
           transparent 345deg 360deg
         );
+
       border-radius: 50%;
-      opacity: 0.42;
+      opacity: 0.5;
       pointer-events: none;
     }
+
+    /* Large faint occult symbol */
 
     .card::after {
       content: "⛧";
@@ -101,7 +128,7 @@
       top: 168px;
       transform: translateX(-50%);
       font-size: 16rem;
-      color: rgba(169, 104, 187, 0.055);
+      color: rgba(169,104,187,0.12);
       line-height: 1;
       pointer-events: none;
       z-index: 0;
@@ -151,21 +178,26 @@
       max-width: 100%;
       margin: 0 auto 22px;
       padding: 10px 16px 8px;
+
       border: 3px double #a53c46;
       color: #e16b76;
+
       transform: rotate(-2deg);
+
       font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(1rem, 5vw, 1.45rem);
+      font-size: clamp(1.15rem, 5.5vw, 1.65rem);
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       text-align: center;
-      box-shadow: 0 0 18px rgba(181,54,54,0.08);
+
+      box-shadow:
+        0 0 18px rgba(181,54,54,0.08);
     }
 
     .names {
       text-align: center;
-      font-size: clamp(2rem, 8vw, 3.6rem);
+      font-size: clamp(2.4rem, 10vw, 4.5rem);
       margin: 12px 0 2px;
       letter-spacing: 0.02em;
     }
@@ -180,7 +212,10 @@
     .record {
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      background: rgba(33, 24, 39, 0.93);
+
+      background:
+        rgba(33,24,39,0.93);
+
       padding: 5px 14px;
       margin: 0 auto 22px;
     }
@@ -189,8 +224,11 @@
       display: flex;
       justify-content: space-between;
       gap: 18px;
+
       padding: 13px 0;
-      border-bottom: 1px dotted #4e3a59;
+
+      border-bottom:
+        1px dotted #4e3a59;
     }
 
     .row:last-child {
@@ -213,10 +251,6 @@
       color: #df626c;
     }
 
-    .official {
-      color: #d9c8df;
-    }
-
     .warning {
       text-align: center;
       margin: 26px 0 10px;
@@ -228,11 +262,18 @@
 
     .legal {
       border: 1px solid #4d3957;
-      background: rgba(16, 12, 19, 0.64);
+
+      background:
+        rgba(16,12,19,0.64);
+
       padding: 18px 16px;
+
       line-height: 1.65;
+
       color: #cdbed3;
+
       font-size: 0.94rem;
+
       margin-top: 20px;
     }
 
@@ -246,11 +287,19 @@
 
     .bureaucracy {
       margin-top: 22px;
-      background: rgba(38, 27, 44, 0.72);
-      border-left: 3px solid #6a4977;
+
+      background:
+        rgba(38,27,44,0.72);
+
+      border-left:
+        3px solid #6a4977;
+
       padding: 16px;
+
       color: #d4c5da;
+
       line-height: 1.65;
+
       font-size: 0.93rem;
     }
 
@@ -258,23 +307,85 @@
       color: #f0e5f2;
     }
 
+    .survey {
+      margin-top: 22px;
+
+      background:
+        rgba(38,27,44,0.72);
+
+      border:
+        1px solid #5d4568;
+
+      padding: 20px 16px;
+
+      color: #d4c5da;
+
+      line-height: 1.65;
+
+      font-size: 0.93rem;
+
+      text-align: center;
+    }
+
+    .survey-title {
+      color: #f0e5f2;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+    }
+
+    .stars {
+      margin: 10px 0;
+      color: #c69ad3;
+      font-size: 1.35rem;
+      letter-spacing: 0.15em;
+    }
+
+    .quote {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #eee3f1;
+    }
+
+    .survey-small {
+      font-size: 0.8rem;
+      color: #907d99;
+    }
+
     .stamp {
-      margin: 25px auto 5px;
+      margin: 28px auto 5px;
+
       width: 170px;
       height: 170px;
-      border: 3px double #6e4d79;
+
+      border:
+        3px double #6e4d79;
+
       border-radius: 50%;
+
       display: grid;
       place-items: center;
+
       text-align: center;
-      color: #9f79ad;
+
+      color: #a17caf;
+
       transform: rotate(-7deg);
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-weight: 800;
+
       letter-spacing: 0.08em;
+
       font-size: 0.78rem;
+
       text-transform: uppercase;
-      opacity: 0.9;
+
+      opacity: 0.95;
     }
 
     .stamp span {
@@ -285,9 +396,13 @@
 
     .footer {
       margin-top: 22px;
+
       text-align: center;
+
       color: #876e92;
+
       font-size: 0.74rem;
+
       line-height: 1.55;
     }
 
@@ -296,14 +411,31 @@
     }
 
     .smallnote {
-      margin-top: 16px;
+      margin-top: 18px;
+
       text-align: center;
+
       font-size: 0.72rem;
+
       color: #705d78;
-      line-height: 1.5;
+
+      line-height: 1.6;
+    }
+
+    .thanks {
+      display: block;
+
+      margin: 14px 0;
+
+      color: #a98db3;
+
+      font-size: 0.82rem;
+
+      font-weight: bold;
     }
 
     @media (max-width: 480px) {
+
       .card {
         padding: 24px 15px;
       }
@@ -321,26 +453,35 @@
         width: 150px;
         height: 150px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
+
   <main class="page">
+
     <div class="seal">
       Infernal Registry • Department of Eternal Covenants
     </div>
 
     <section class="card">
+
       <div class="content">
 
-        <h1>The Infernal Registry</h1>
+        <h1>
+          The Infernal Registry
+        </h1>
 
         <div class="department">
           Department of Eternal Covenants
         </div>
 
-        <div class="ornament">✦ ⛧ ✦</div>
+        <div class="ornament">
+          ✦ ⛧ ✦
+        </div>
 
         <div class="verified">
           Covenant Verified
@@ -351,153 +492,366 @@
         </div>
 
         <div class="date">
-          September 2026
+          September 3, 2026
         </div>
 
         <div class="thornline">
           ❦──────────⛧──────────❦
         </div>
 
+
+        <!-- OFFICIAL RECORD -->
+
+
         <div class="record">
 
           <div class="row">
-            <div class="label">Covenant Number</div>
-            <div class="value">666-2026</div>
+            <div class="label">
+              Covenant Number
+            </div>
+
+            <div class="value">
+              666-2026
+            </div>
           </div>
 
-          <div class="row">
-            <div class="label">Souls Registered</div>
-            <div class="value">2</div>
-          </div>
 
           <div class="row">
-            <div class="label">Current Status</div>
-            <div class="value">Eternally Bound</div>
+            <div class="label">
+              Souls Registered
+            </div>
+
+            <div class="value">
+              2
+            </div>
           </div>
 
-          <div class="row">
-            <div class="label">Contract Term</div>
-            <div class="value">Perpetual</div>
-          </div>
 
           <div class="row">
-            <div class="label">Jurisdiction</div>
-            <div class="value">This World &amp; The Next</div>
+            <div class="label">
+              Current Status
+            </div>
+
+            <div class="value">
+              Eternally Bound
+            </div>
           </div>
 
-          <div class="row">
-            <div class="label">Termination Date</div>
-            <div class="value">Till Death</div>
-          </div>
 
           <div class="row">
-            <div class="label">Post-Mortem Clause</div>
-            <div class="value">Still Binding</div>
+            <div class="label">
+              Contract Term
+            </div>
+
+            <div class="value">
+              Perpetual
+            </div>
           </div>
 
-          <div class="row">
-            <div class="label">Annulment Request</div>
-            <div class="value denied">DENIED</div>
-          </div>
 
           <div class="row">
-            <div class="label">Appeal Status</div>
-            <div class="value denied">ALSO DENIED</div>
+            <div class="label">
+              Jurisdiction
+            </div>
+
+            <div class="value">
+              This World &amp; The Next
+            </div>
           </div>
 
-          <div class="row">
-            <div class="label">Refund Eligibility</div>
-            <div class="value">Absolutely Not</div>
-          </div>
 
           <div class="row">
-            <div class="label">Exorcism Coverage</div>
-            <div class="value">Out of Network</div>
+            <div class="label">
+              Termination Date
+            </div>
+
+            <div class="value">
+              Till Death
+            </div>
           </div>
 
+
           <div class="row">
-            <div class="label">Emergency Contact</div>
-            <div class="value">The Void</div>
+            <div class="label">
+              Post-Mortem Clause
+            </div>
+
+            <div class="value">
+              Still Binding
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="label">
+              Annulment Request
+            </div>
+
+            <div class="value denied">
+              DENIED
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="label">
+              Appeal Status
+            </div>
+
+            <div class="value denied">
+              ALSO DENIED
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="label">
+              Refund Eligibility
+            </div>
+
+            <div class="value">
+              Absolutely Not
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="label">
+              Exorcism Coverage
+            </div>
+
+            <div class="value">
+              Out of Network
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="label">
+              Emergency Contact
+            </div>
+
+            <div class="value">
+              The Void
+            </div>
           </div>
 
         </div>
+
 
         <div class="warning">
           ☠ NO REFUNDS • NO EXCHANGES • NO EXORCISMS ☠
         </div>
 
+
+        <!-- LEGAL TERMS -->
+
+
         <div class="legal">
+
           <p>
-            By entering into this covenant, both parties acknowledge that they
-            have willingly, knowingly, and with suspicious enthusiasm agreed
-            to remain bound through sickness, health, financial decisions,
-            haunted furniture, unexplained attic noises, minor curses,
-            inconvenient prophecies, and all currently recognized planes of existence.
+            By entering into this covenant, both parties acknowledge
+            that they have willingly, knowingly, and with suspicious
+            enthusiasm agreed to remain bound through sickness,
+            health, financial decisions, haunted furniture,
+            unexplained attic noises, minor curses, inconvenient
+            prophecies, and all currently recognized planes of
+            existence.
           </p>
 
           <p>
-            This agreement remains legally, spiritually, cosmically, and
-            bureaucratically binding in the event of death, undeath,
-            reincarnation, demonic possession, accidental time travel,
-            spontaneous dimensional displacement, or resurrection performed
-            without prior authorization from the Department.
+            This agreement remains legally, spiritually, cosmically,
+            and bureaucratically binding in the event of death,
+            undeath, reincarnation, demonic possession, accidental
+            time travel, spontaneous dimensional displacement, or
+            resurrection performed without prior authorization from
+            the Department.
           </p>
 
           <p>
-            Should either party become a ghost, specter, revenant, vampire,
-            eldritch abomination, or suspiciously articulate raven, the covenant
-            shall automatically renew for an additional eternity.
+            Should either party become a ghost, specter, revenant,
+            vampire, eldritch abomination, or suspiciously articulate
+            raven, the covenant shall automatically renew for an
+            additional eternity.
           </p>
 
           <p>
-            The phrase “Till Death” is recognized by this office as ceremonial
-            language only and does not constitute a valid termination mechanism.
+            The phrase <strong>“Till Death”</strong> is recognized
+            by this office as ceremonial language only and does not
+            constitute a valid termination mechanism.
           </p>
+
         </div>
 
-        <div class="bureaucracy">
-          <strong>OFFICIAL NOTICE:</strong><br><br>
 
-          Any attempt to dissolve this union through mortal courts, infernal courts,
-          heavenly appeals, seances, blood rituals, Ouija boards, group texts,
-          passive-aggressive social media posts, or “taking a little space”
-          shall be considered administratively adorable and legally ineffective.
+        <!-- OFFICIAL NOTICE -->
+
+
+        <div class="bureaucracy">
+
+          <strong>
+            OFFICIAL NOTICE:
+          </strong>
+
+          <br><br>
+
+          Any attempt to dissolve this union through mortal courts,
+          infernal courts, heavenly appeals, seances, blood rituals,
+          Ouija boards, group texts, passive-aggressive social media
+          posts, or “taking a little space” shall be considered
+          administratively adorable and legally ineffective.
+
           <br><br>
 
           Processing time for supernatural disputes is currently
-          <strong>6–9 eternities</strong>.
+
+          <strong>
+            6–9 eternities.
+          </strong>
+
           <br><br>
 
-          Please do not summon a representative.  
+          Please do not summon a representative.
+
+          <br>
+
           A representative will summon <em>you</em>.
+
         </div>
+
+
+        <!-- CUSTOMER SATISFACTION -->
+
+
+        <div class="survey">
+
+          <div class="survey-title">
+            CUSTOMER SATISFACTION SURVEY
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <div class="quote">
+            “Would condemn again.”
+          </div>
+
+          <br>
+
+          Overall Eternal Covenant Experience:
+
+          <br>
+
+          <strong>
+            5 out of 5 Pentagrams
+          </strong>
+
+          <br><br>
+
+          Likelihood of Recommending Eternal Matrimony
+          to a Friend or Fellow Cultist:
+
+          <br>
+
+          <strong>
+            Extremely Likely
+          </strong>
+
+          <br><br>
+
+          <div class="survey-small">
+            Survey results collected from both registered souls.
+            Participation became mandatory upon death.
+          </div>
+
+        </div>
+
+
+        <!-- OFFICIAL SEAL -->
+
 
         <div class="stamp">
+
           <div>
-            <span>⛧</span>
-            Infernal Registry<br>
-            Officially Bound<br>
+
+            <span>
+              ⛧
+            </span>
+
+            Infernal Registry
+
+            <br>
+
+            Officially Bound
+
+            <br>
+
             No Escape
+
           </div>
+
         </div>
 
-        <div class="ornament">✦ ⛧ ✦</div>
+
+        <div class="ornament">
+          ✦ ⛧ ✦
+        </div>
+
+
+        <!-- FOOTER -->
+
 
         <div class="footer">
-          <strong>Official Record of the Infernal Registry</strong><br>
-          Department of Eternal Covenants<br>
-          Filing Division: Love, Death &amp; Other Binding Agreements<br>
+
+          <strong>
+            Official Record of the Infernal Registry
+          </strong>
+
+          <br>
+
+          Department of Eternal Covenants
+
+          <br>
+
+          Filing Division:
+          Love, Death &amp; Other Binding Agreements
+
+          <br>
+
           Bureau of Questionable Life Choices
+
         </div>
 
+
         <div class="smallnote">
-          Registry staff are not responsible for hauntings, omens,
-          cursed wedding gifts, spontaneous Latin, goat-related incidents,
-          or unusually judgmental crows.
+
+          Registry staff are not responsible for hauntings,
+          omens, cursed wedding gifts, spontaneous Latin,
+          goat-related incidents, unusually judgmental crows,
+          mysterious chanting from the basement, or children
+          conceived during a blood moon.
+
+          <span class="thanks">
+            Thank you for choosing eternal damnation.
+            <br>
+            Your business is important to us.
+          </span>
+
+          For complaints, please scream directly into the void.
+
+          <br>
+
+          A representative will ignore you in the order
+          your complaint was received.
+
         </div>
 
       </div>
+
     </section>
+
   </main>
+
 </body>
 </html>

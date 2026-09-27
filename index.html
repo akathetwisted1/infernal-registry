@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Infernal Registry — Igor & Fede</title>
 
@@ -17,7 +17,6 @@
       --accent2: #c5a3d6;
       --line: #5a4565;
       --danger: #d14f5c;
-      --danger2: #8b2531;
     }
 
     * {
@@ -27,6 +26,7 @@
     body {
       margin: 0;
       min-height: 100vh;
+
       background:
         radial-gradient(
           circle at top,
@@ -34,11 +34,19 @@
           #120d16 43%,
           #070608 100%
         );
+
       color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
       display: flex;
       justify-content: center;
-      padding: 24px 14px 42px;
+
+      padding:
+        24px 14px 42px;
     }
 
     .page {
@@ -62,7 +70,7 @@
       background:
         radial-gradient(
           circle at 50% 18%,
-          rgba(147, 88, 166, 0.08),
+          rgba(147,88,166,0.08),
           transparent 28%
         ),
         linear-gradient(
@@ -71,30 +79,33 @@
         ),
         var(--panel);
 
-      border: 1px solid var(--line);
+      border:
+        1px solid var(--line);
 
       box-shadow:
         0 0 0 3px #0a080c,
         0 0 0 4px #3d2d47,
         0 20px 55px rgba(0,0,0,0.55);
 
-      padding: 28px 20px;
+      padding:
+        28px 20px;
     }
 
-    /* Faint ritual geometry behind the header */
+    /*
+      Faint ritual geometry
+    */
 
     .card::before {
       content: "";
+
       position: absolute;
-      inset: 125px 55px auto 55px;
+
+      inset:
+        125px 55px auto 55px;
+
       height: 340px;
 
       background:
-        radial-gradient(
-          circle,
-          transparent 38%,
-          rgba(0,0,0,0) 39%
-        ),
         conic-gradient(
           from 0deg,
           transparent 0deg 18deg,
@@ -115,22 +126,36 @@
         );
 
       border-radius: 50%;
+
       opacity: 0.5;
+
       pointer-events: none;
     }
 
-    /* Large faint occult symbol */
+    /*
+      Large occult symbol
+    */
 
     .card::after {
       content: "⛧";
+
       position: absolute;
+
       left: 50%;
       top: 168px;
-      transform: translateX(-50%);
+
+      transform:
+        translateX(-50%);
+
       font-size: 16rem;
-      color: rgba(169,104,187,0.12);
+
+      color:
+        rgba(169,104,187,0.12);
+
       line-height: 1;
+
       pointer-events: none;
+
       z-index: 0;
     }
 
@@ -141,55 +166,87 @@
 
     h1 {
       margin: 0;
+
       text-align: center;
-      font-size: clamp(2rem, 8vw, 4rem);
+
+      font-size:
+        clamp(2rem,8vw,4rem);
+
       font-weight: normal;
+
       letter-spacing: 0.04em;
+
       color: #f5eff7;
     }
 
     .department {
       text-align: center;
-      color: var(--accent2);
+
+      color:
+        var(--accent2);
+
       margin-top: 6px;
+
       font-size: 0.92rem;
+
       letter-spacing: 0.13em;
+
       text-transform: uppercase;
     }
 
     .ornament {
       text-align: center;
-      color: var(--accent);
-      margin: 20px 0;
-      letter-spacing: 0.35em;
-      font-size: 1rem;
-    }
 
-    .thornline {
-      text-align: center;
-      color: #8f6a9f;
-      margin: 16px auto 18px;
-      font-size: 1.1rem;
-      letter-spacing: 0.16em;
+      color:
+        var(--accent);
+
+      margin:
+        20px 0;
+
+      letter-spacing:
+        0.35em;
+
+      font-size: 1rem;
     }
 
     .verified {
       width: fit-content;
+
       max-width: 100%;
-      margin: 0 auto 22px;
-      padding: 10px 16px 8px;
 
-      border: 3px double #a53c46;
-      color: #e16b76;
+      margin:
+        0 auto 22px;
 
-      transform: rotate(-2deg);
+      padding:
+        10px 16px 8px;
 
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(1.15rem, 5.5vw, 1.65rem);
+      border:
+        3px double #a53c46;
+
+      color:
+        #e16b76;
+
+      transform:
+        rotate(-2deg);
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size:
+        clamp(1.15rem,5.5vw,1.65rem);
+
       font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-align: center;
+
+      letter-spacing:
+        0.12em;
+
+      text-transform:
+        uppercase;
+
+      text-align:
+        center;
 
       box-shadow:
         0 0 18px rgba(181,54,54,0.08);
@@ -197,96 +254,344 @@
 
     .names {
       text-align: center;
-      font-size: clamp(2.4rem, 10vw, 4.5rem);
-      margin: 12px 0 2px;
-      letter-spacing: 0.02em;
+
+      font-size:
+        clamp(2.4rem,10vw,4.5rem);
+
+      margin:
+        12px 0 2px;
+
+      letter-spacing:
+        0.02em;
     }
 
     .date {
       text-align: center;
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin-bottom: 24px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        1.08rem;
+
+      margin-bottom:
+        24px;
     }
 
+    /*
+      PHOTO / EVIDENCE
+    */
+
+    .couple-evidence {
+      margin:
+        26px auto 30px;
+
+      padding:
+        10px;
+
+      max-width:
+        560px;
+
+      background:
+        #0d0910;
+
+      border:
+        1px solid #6a4c75;
+
+      box-shadow:
+        0 0 0 3px #17101b,
+        0 0 0 4px #3f2d48,
+        0 14px 30px rgba(0,0,0,0.45);
+
+      text-align:
+        center;
+    }
+
+    .photo-frame {
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      border:
+        1px solid #4c3756;
+    }
+
+    .photo-frame::before {
+      content: "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      box-shadow:
+        inset 0 0 45px rgba(0,0,0,0.75);
+
+      pointer-events:
+        none;
+
+      z-index:
+        2;
+    }
+
+    .couple-evidence img {
+      display:
+        block;
+
+      width:
+        100%;
+
+      height:
+        auto;
+    }
+
+    .evidence-heading {
+      margin-top:
+        16px;
+
+      color:
+        #d8c1df;
+
+      font-size:
+        0.82rem;
+
+      font-weight:
+        bold;
+
+      letter-spacing:
+        0.16em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .evidence-status {
+      display:
+        inline-block;
+
+      margin:
+        12px 0 7px;
+
+      padding:
+        7px 11px;
+
+      border:
+        2px double #94404b;
+
+      color:
+        #dc6873;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size:
+        0.72rem;
+
+      font-weight:
+        bold;
+
+      letter-spacing:
+        0.10em;
+
+      transform:
+        rotate(-1deg);
+
+      text-transform:
+        uppercase;
+    }
+
+    .evidence-caption {
+      margin:
+        9px 14px 10px;
+
+      color:
+        #9e88a7;
+
+      font-size:
+        0.82rem;
+
+      line-height:
+        1.55;
+    }
+
+    .evidence-file {
+      margin:
+        12px 0 4px;
+
+      color:
+        #65546d;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-size:
+        0.62rem;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+    }
+
+    .thornline {
+      text-align:
+        center;
+
+      color:
+        #8f6a9f;
+
+      margin:
+        20px auto 20px;
+
+      font-size:
+        1.1rem;
+
+      letter-spacing:
+        0.16em;
+    }
+
+    /*
+      RECORD
+    */
+
     .record {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
 
       background:
         rgba(33,24,39,0.93);
 
-      padding: 5px 14px;
-      margin: 0 auto 22px;
+      padding:
+        5px 14px;
+
+      margin:
+        0 auto 22px;
     }
 
     .row {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
+      display:
+        flex;
 
-      padding: 13px 0;
+      justify-content:
+        space-between;
+
+      gap:
+        18px;
+
+      padding:
+        13px 0;
 
       border-bottom:
         1px dotted #4e3a59;
     }
 
     .row:last-child {
-      border-bottom: none;
+      border-bottom:
+        none;
     }
 
     .label {
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      font-size: 0.79rem;
+      color:
+        var(--muted);
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.09em;
+
+      font-size:
+        0.79rem;
     }
 
     .value {
-      text-align: right;
-      font-weight: bold;
+      text-align:
+        right;
+
+      font-weight:
+        bold;
     }
 
     .denied {
-      color: #df626c;
+      color:
+        #df626c;
     }
 
     .warning {
-      text-align: center;
-      margin: 26px 0 10px;
-      color: #ebd1ee;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-      line-height: 1.6;
+      text-align:
+        center;
+
+      margin:
+        26px 0 10px;
+
+      color:
+        #ebd1ee;
+
+      font-size:
+        1rem;
+
+      letter-spacing:
+        0.05em;
+
+      line-height:
+        1.6;
     }
 
+    /*
+      LEGAL SECTION
+    */
+
     .legal {
-      border: 1px solid #4d3957;
+      border:
+        1px solid #4d3957;
 
       background:
         rgba(16,12,19,0.64);
 
-      padding: 18px 16px;
+      padding:
+        18px 16px;
 
-      line-height: 1.65;
+      line-height:
+        1.65;
 
-      color: #cdbed3;
+      color:
+        #cdbed3;
 
-      font-size: 0.94rem;
+      font-size:
+        0.94rem;
 
-      margin-top: 20px;
+      margin-top:
+        20px;
     }
 
     .legal p {
-      margin: 0 0 15px;
+      margin:
+        0 0 15px;
     }
 
     .legal p:last-child {
-      margin-bottom: 0;
+      margin-bottom:
+        0;
     }
 
+    /*
+      OFFICIAL NOTICE
+    */
+
     .bureaucracy {
-      margin-top: 22px;
+      margin-top:
+        22px;
 
       background:
         rgba(38,27,44,0.72);
@@ -294,21 +599,31 @@
       border-left:
         3px solid #6a4977;
 
-      padding: 16px;
+      padding:
+        16px;
 
-      color: #d4c5da;
+      color:
+        #d4c5da;
 
-      line-height: 1.65;
+      line-height:
+        1.65;
 
-      font-size: 0.93rem;
+      font-size:
+        0.93rem;
     }
 
     .bureaucracy strong {
-      color: #f0e5f2;
+      color:
+        #f0e5f2;
     }
 
+    /*
+      SURVEY
+    */
+
     .survey {
-      margin-top: 22px;
+      margin-top:
+        22px;
 
       background:
         rgba(38,27,44,0.72);
@@ -316,148 +631,238 @@
       border:
         1px solid #5d4568;
 
-      padding: 20px 16px;
+      padding:
+        20px 16px;
 
-      color: #d4c5da;
+      color:
+        #d4c5da;
 
-      line-height: 1.65;
+      line-height:
+        1.65;
 
-      font-size: 0.93rem;
+      font-size:
+        0.93rem;
 
-      text-align: center;
+      text-align:
+        center;
     }
 
     .survey-title {
-      color: #f0e5f2;
-      font-weight: bold;
-      letter-spacing: 0.12em;
-      font-size: 0.85rem;
+      color:
+        #f0e5f2;
+
+      font-weight:
+        bold;
+
+      letter-spacing:
+        0.12em;
+
+      font-size:
+        0.85rem;
     }
 
     .stars {
-      margin: 10px 0;
-      color: #c69ad3;
-      font-size: 1.35rem;
-      letter-spacing: 0.15em;
+      margin:
+        10px 0;
+
+      color:
+        #c69ad3;
+
+      font-size:
+        1.35rem;
+
+      letter-spacing:
+        0.15em;
     }
 
     .quote {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #eee3f1;
+      font-size:
+        1.1rem;
+
+      font-weight:
+        bold;
+
+      color:
+        #eee3f1;
     }
 
     .survey-small {
-      font-size: 0.8rem;
-      color: #907d99;
+      font-size:
+        0.8rem;
+
+      color:
+        #907d99;
     }
 
-    .stamp {
-      margin: 28px auto 5px;
+    /*
+      OFFICIAL SEAL
+    */
 
-      width: 170px;
-      height: 170px;
+    .stamp {
+      margin:
+        28px auto 5px;
+
+      width:
+        170px;
+
+      height:
+        170px;
 
       border:
         3px double #6e4d79;
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
-      display: grid;
-      place-items: center;
+      display:
+        grid;
 
-      text-align: center;
+      place-items:
+        center;
 
-      color: #a17caf;
+      text-align:
+        center;
 
-      transform: rotate(-7deg);
+      color:
+        #a17caf;
+
+      transform:
+        rotate(-7deg);
 
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      letter-spacing: 0.08em;
+      letter-spacing:
+        0.08em;
 
-      font-size: 0.78rem;
+      font-size:
+        0.78rem;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      opacity: 0.95;
+      opacity:
+        0.95;
     }
 
     .stamp span {
-      display: block;
-      font-size: 2rem;
-      margin-bottom: 4px;
+      display:
+        block;
+
+      font-size:
+        2rem;
+
+      margin-bottom:
+        4px;
     }
 
+    /*
+      FOOTER
+    */
+
     .footer {
-      margin-top: 22px;
+      margin-top:
+        22px;
 
-      text-align: center;
+      text-align:
+        center;
 
-      color: #876e92;
+      color:
+        #876e92;
 
-      font-size: 0.74rem;
+      font-size:
+        0.74rem;
 
-      line-height: 1.55;
+      line-height:
+        1.55;
     }
 
     .footer strong {
-      color: #b89cc3;
+      color:
+        #b89cc3;
     }
 
     .smallnote {
-      margin-top: 18px;
+      margin-top:
+        18px;
 
-      text-align: center;
+      text-align:
+        center;
 
-      font-size: 0.72rem;
+      font-size:
+        0.72rem;
 
-      color: #705d78;
+      color:
+        #705d78;
 
-      line-height: 1.6;
+      line-height:
+        1.6;
     }
 
     .thanks {
-      display: block;
+      display:
+        block;
 
-      margin: 14px 0;
+      margin:
+        14px 0;
 
-      color: #a98db3;
+      color:
+        #a98db3;
 
-      font-size: 0.82rem;
+      font-size:
+        0.82rem;
 
-      font-weight: bold;
+      font-weight:
+        bold;
     }
+
+    /*
+      MOBILE
+    */
 
     @media (max-width: 480px) {
 
       .card {
-        padding: 24px 15px;
+        padding:
+          24px 15px;
       }
 
       .row {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction:
+          column;
+
+        gap:
+          5px;
       }
 
       .value {
-        text-align: left;
+        text-align:
+          left;
       }
 
       .stamp {
-        width: 150px;
-        height: 150px;
+        width:
+          150px;
+
+        height:
+          150px;
+      }
+
+      .couple-evidence {
+        padding:
+          7px;
       }
 
     }
 
   </style>
 </head>
+
 
 <body>
 
@@ -467,9 +872,14 @@
       Infernal Registry • Department of Eternal Covenants
     </div>
 
+
     <section class="card">
 
       <div class="content">
+
+
+        <!-- HEADER -->
+
 
         <h1>
           The Infernal Registry
@@ -495,6 +905,59 @@
           September 3, 2026
         </div>
 
+
+        <!-- PHOTOGRAPHIC EVIDENCE -->
+
+
+        <div class="couple-evidence">
+
+          <div class="photo-frame">
+
+            <img
+              src="igor-fede-infernal-registry.jpg"
+              alt="Igor and Fede leaving the Infernal Registry"
+            >
+
+          </div>
+
+          <div class="evidence-heading">
+            THE REGISTERED SOULS
+          </div>
+
+          <div class="evidence-status">
+            PHOTOGRAPHIC EVIDENCE ACCEPTED
+          </div>
+
+          <div class="evidence-caption">
+
+            Facial recognition confirms both parties departed the
+            Department of Eternal Covenants hand-in-hand following
+            execution of Covenant No. 666-2026.
+
+            <br><br>
+
+            Neither party appeared alarmed by the flames, demons,
+            ceremonial architecture, eternal consequences, or
+            suspicious number of witnesses with horns.
+
+            <br><br>
+
+            Both subjects were observed smiling upon departure.
+
+            <br>
+
+            The Department has chosen to interpret this as
+            <strong>informed consent.</strong>
+
+          </div>
+
+          <div class="evidence-file">
+            Evidence File 666-2026-A • Archival Status: Eternally Retained
+          </div>
+
+        </div>
+
+
         <div class="thornline">
           ❦──────────⛧──────────❦
         </div>
@@ -506,6 +969,7 @@
         <div class="record">
 
           <div class="row">
+
             <div class="label">
               Covenant Number
             </div>
@@ -513,10 +977,12 @@
             <div class="value">
               666-2026
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Souls Registered
             </div>
@@ -524,10 +990,12 @@
             <div class="value">
               2
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Current Status
             </div>
@@ -535,10 +1003,12 @@
             <div class="value">
               Eternally Bound
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Contract Term
             </div>
@@ -546,10 +1016,12 @@
             <div class="value">
               Perpetual
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Jurisdiction
             </div>
@@ -557,10 +1029,12 @@
             <div class="value">
               This World &amp; The Next
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Termination Date
             </div>
@@ -568,10 +1042,12 @@
             <div class="value">
               Till Death
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Post-Mortem Clause
             </div>
@@ -579,10 +1055,12 @@
             <div class="value">
               Still Binding
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Annulment Request
             </div>
@@ -590,10 +1068,12 @@
             <div class="value denied">
               DENIED
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Appeal Status
             </div>
@@ -601,10 +1081,12 @@
             <div class="value denied">
               ALSO DENIED
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Refund Eligibility
             </div>
@@ -612,10 +1094,12 @@
             <div class="value">
               Absolutely Not
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Exorcism Coverage
             </div>
@@ -623,10 +1107,12 @@
             <div class="value">
               Out of Network
             </div>
+
           </div>
 
 
           <div class="row">
+
             <div class="label">
               Emergency Contact
             </div>
@@ -634,6 +1120,7 @@
             <div class="value">
               The Void
             </div>
+
           </div>
 
         </div>
@@ -676,9 +1163,10 @@
           </p>
 
           <p>
-            The phrase <strong>“Till Death”</strong> is recognized
-            by this office as ceremonial language only and does not
-            constitute a valid termination mechanism.
+            The phrase
+            <strong>“Till Death”</strong>
+            is recognized by this office as ceremonial language only
+            and does not constitute a valid termination mechanism.
           </p>
 
         </div>
@@ -833,9 +1321,13 @@
           conceived during a blood moon.
 
           <span class="thanks">
+
             Thank you for choosing eternal damnation.
+
             <br>
+
             Your business is important to us.
+
           </span>
 
           For complaints, please scream directly into the void.
@@ -846,6 +1338,7 @@
           your complaint was received.
 
         </div>
+
 
       </div>
 

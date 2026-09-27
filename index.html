@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infernal Registry — Igor & Fede</title>
+
+  <style>
+    :root {
+      --bg: #0d0a10;
+      --panel: #17111c;
+      --panel2: #211827;
+      --ink: #f1eaf4;
+      --muted: #b9a8c3;
+      --accent: #8e5aa7;
+      --accent2: #c5a3d6;
+      --line: #5b4566;
+      --danger: #b53636;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #24172b 0%, #110c15 42%, #080609 100%);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      display: flex;
+      justify-content: center;
+      padding: 24px 14px 40px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .seal {
+      text-align: center;
+      color: var(--accent2);
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background:
+        linear-gradient(rgba(255,255,255,0.015), rgba(255,255,255,0.01)),
+        var(--panel);
+      border: 1px solid var(--line);
+      box-shadow:
+        0 0 0 3px #0b080d,
+        0 0 0 4px #3f3048,
+        0 20px 50px rgba(0,0,0,0.5);
+      padding: 28px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before,
+    .card::after {
+      content: "✦";
+      position: absolute;
+      color: #3e2c47;
+      font-size: 8rem;
+      opacity: 0.22;
+      line-height: 1;
+    }
+
+    .card::before {
+      top: -35px;
+      left: -15px;
+    }
+
+    .card::after {
+      bottom: -45px;
+      right: -10px;
+      transform: rotate(180deg);
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: clamp(2rem, 8vw, 4rem);
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      color: #f5eff7;
+    }
+
+    .department {
+      text-align: center;
+      color: var(--accent2);
+      margin-top: 6px;
+      font-size: 0.95rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      text-align: center;
+      color: var(--accent);
+      margin: 22px 0;
+      letter-spacing: 0.5em;
+    }
+
+    .verified {
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto 22px;
+      padding: 10px 16px 8px;
+      border: 3px double #a53c46;
+      color: #d96b72;
+      transform: rotate(-2deg);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(1rem, 5vw, 1.45rem);
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .names {
+      text-align: center;
+      font-size: clamp(2rem, 8vw, 3.6rem);
+      margin: 12px 0 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .date {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 26px;
+    }
+
+    .record {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--panel2);
+      padding: 5px 14px;
+      margin: 0 auto 22px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 13px 0;
+      border-bottom: 1px dotted #4e3a59;
+    }
+
+    .row:last-child {
+      border-bottom: none;
+    }
+
+    .label {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-size: 0.8rem;
+    }
+
+    .value {
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .denied {
+      color: #d76464;
+    }
+
+    .fineprint {
+      text-align: center;
+      color: #a38eaf;
+      line-height: 1.6;
+      font-size: 0.92rem;
+      margin-top: 20px;
+    }
+
+    .warning {
+      text-align: center;
+      margin: 28px 0 8px;
+      color: #e4c2e8;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .footer {
+      margin-top: 22px;
+      text-align: center;
+      color: #866d91;
+      font-size: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .footer strong {
+      color: #b38fc0;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 24px 15px;
+      }
+
+      .row {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="seal">Infernal Registry • Department of Eternal Covenants</div>
+
+    <section class="card">
+      <h1>The Infernal Registry</h1>
+
+      <div class="department">
+        Department of Eternal Covenants
+      </div>
+
+      <div class="divider">✦ ☠ ✦</div>
+
+      <div class="verified">
+        Covenant Verified
+      </div>
+
+      <div class="names">
+        IGOR &amp; FEDE
+      </div>
+
+      <div class="date">
+        September 2026
+      </div>
+
+      <div class="record">
+        <div class="row">
+          <div class="label">Covenant Number</div>
+          <div class="value">666-2026</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Souls Registered</div>
+          <div class="value">2</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Current Status</div>
+          <div class="value">Eternally Bound</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Contract Term</div>
+          <div class="value">Perpetual</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Annulment Request</div>
+          <div class="value denied">DENIED</div>
+        </div>
+
+        <div class="row">
+          <div class="label">Expiration</div>
+          <div class="value">Not Even Death</div>
+        </div>
+      </div>
+
+      <div class="warning">
+        ☠ NO REFUNDS • NO EXCHANGES • NO EXORCISMS ☠
+      </div>
+
+      <div class="fineprint">
+        By entering into this covenant, both parties have knowingly,
+        willingly, and perhaps questionably agreed to remain bound
+        through sickness, health, minor hauntings, suspicious noises
+        in the attic, and all known planes of existence.
+        <br><br>
+        This agreement remains valid in this world, the next,
+        and any poorly lit dimension discovered thereafter.
+      </div>
+
+      <div class="divider">✦ ☠ ✦</div>
+
+      <div class="footer">
+        <strong>Official Record of the Infernal Registry</strong><br>
+        Department of Eternal Covenants<br>
+        Filing Division: Love, Death &amp; Other Binding Agreements
+      </div>
+    </section>
+  </main>
+</body>
+</html>
